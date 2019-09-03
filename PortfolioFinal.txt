@@ -93,7 +93,7 @@ img {
 
 <ul>
   <li><a href="HomeFinal.html">Home</a></li>
-  <li><a class="active" href="Portfolio.html">Portfolio</a></li>
+  <li><a class="active" href="PortfolioFinal.html">Portfolio</a></li>
   <li><a href="AboutMeFinal.html">About Me</a></li>
 </ul>
 
