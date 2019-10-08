@@ -18,13 +18,7 @@ ul {
 
 li {
   float: left;
-}
-
-li {
-  font-variant: small-caps;
-}
-
-li {
+  font-variant: small-caps
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
@@ -51,17 +45,8 @@ body {
 h1 {
   text-align: center;
   color: #171717;
-}
-
-h1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-h1 {
   font-weight: lighter;
-}
-
-h1 {
   font-variant: small-caps;
 }
 
@@ -79,11 +64,35 @@ margin-right:auto;
 body {
   text-align: center;
   color: #171717;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
+  font-variant: small-caps;
 }
 	
 img {
   width: auto;
   max-width: 50%;
+  text-align: center;
+}
+	
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
   text-align: center;
 }
 
@@ -104,15 +113,7 @@ img {
 
 <img src="Images/kisspng-directory-file-folders-clip-art-yellow-folder-cliparts-5aad8eaa8abb42.0581916315213236905683.png" 
  alt="Portfolio" class="responsive">
-	
-<body style="font-size:5vw;">My MIT App Inventor Mini Golf!</body>
-	
-<img src="Images/Golf Screenshot 1.PNG" 
- alt="Portfolio" class="responsive">
-	
-<img src="Images/Golf Screenshot 2.PNG" 
- alt="Portfolio" class="responsive">
-	
+		
 <body style="font-size:5vw;">My Scratch Game! Click the all the colored balls to earn points!</body>
 	
 <div id="Button Run" class="container">
@@ -120,6 +121,21 @@ img {
 </div>
   <iframe src="https://scratch.mit.edu/projects/328774006/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
+
+<div class="gallery">
+  <a target="_blank">
+    <img src="Images/Golf Screenshot 1.PNG" alt="MIT App Inventor Golf Game" width="600" height="400">
+  </a>
+  <div class="desc">1</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank">
+    <img src="Images/Golf Screenshot 2.PNG" alt="MIT App Inventor Golf Game" width="600" height="400">
+  </a>
+  <div class="desc">2</div>
+</div>
+	
 </body>
     
 </html>
