@@ -1,0 +1,154 @@
+from __future__ import print_function
+
+
+def APLyfe():
+  finished = 0
+  testtime = 0
+  valscore = 5
+  pass1 = 0
+  print ("Good morning! Welcome to your life, as an AP Student. Your goal is simple: become the valedictorian. Today, like all other days, you will be faced with the challege of living the ultimate AP life. ALSO: CAPITILZATION MATTERS")
+  breakfast = str(input("What do you eat for breakfast? Type 'E' for eggs and bacon and 'C' for cereal or 'P' for pancakes:"))
+  if (breakfast == 'E' or breakfast == 'e' or breakfast == 'P' or breakfast == "p"):
+    pass1 = 2
+  else:
+    pass1 = 1
+  print ("After filling yourself up with your breakfast, it's time to start the day. You head to school and your first class is AP Calculus. After the long, dry lecture, the teacher gives you free time. Do you do homework or talk:")
+  calclec = str(input("What do you do? Type 'HW' to do your homework, or type 'Talk' to talk with your friends:"))
+  if (calclec == 'Talk' or calclec == "talk"):
+    print("When you talk with your fellow AP students, you find that there is going to be a test in APEL! You have APEL 4th period and you haven't studied at all.")
+    calctest = str(input("What do you do? Type 'Cram' to cram, and 'Sick' to fake being sick and get the answers from friends:"))
+    if (calctest == 'Cram' or calctest == "cram"):
+      print("After a bit of studying, the bell rings for next period! You have to pass the APEL test to become the valedictorian. You're so stressed you go straight to AP Chem.")
+      pass1 = 1
+      testtime = 0
+    else:
+      print("The bell rings for next period! You have to pass the APEL test to become the valedictorian, but you aren't stressed at all with your plan. So, you talk to your friends outside of the AP Chem class.")
+      testtime = 1
+      chat = str(input("What do you talk about? Type 'Chem' for chem and 'Else' to talk about anything else:"))
+      if (chat == 'Chem' or chat == "chem"):
+       finished = 1
+       print("There were Workbook pages do!! You quickly complete them.")
+      else:
+       print("You are now relieved of stress. :-)")
+  else:
+    pass1 = 0
+    print("The bell rings for next period!. Feeling relieved that you've finished you homework, you talk with friends outside of the AP Chem class.")
+    chat = str(input("What do you talk about? Type 'Chem' for chem and 'Else' to talk about anything else:"))
+    if (chat == 'Chem' or chat == "chem"):
+      finished = 1
+      print("There were Workbook pages do!! You quickly complete them.")
+    else:
+      print("You are now relieved of stress. :-)")
+  print("AP Chem starts. Mrs Gamberale is checking the workbook pages now!")
+  if (finished == 1):
+    print("You turn them in and get a good grade!! congrats.")
+  else:
+    print("You say that your dog ate them, and you have to use a late pass and turn it in tomorrow.")
+    valscore = valscore - 1
+  quiz = str(input("Next class: APUSH. The teacher surprises you with a pop quiz. Do you go to the 'Bathroom' and dip or take the L? Type 'Bathroom' to go to the bathroom or 'L' to take the L:"))
+  if quiz == "Bathroom" or quiz == "bathroom":
+    print("You take the quiz tomorrow and you go to lunch with you GPA safe and sound.")
+    concert = str(input("Lunch time! Another option-do you go to the library or Ryan Kim's air guitar concert? Type 'Library' to go to the library or 'Concert' to go to the concert:"))
+    if concert == 'Concert' or concert == 'concert':
+      valscore = valscore - 1
+      print("Well you didn't study but you had a blast!")
+      print("Now: APEL time. Hope you studied for the surpise test!!!")
+      if testtime == 0:
+         if pass1 == 2:
+           print("Nice! You received a juicy A!")
+         if pass1 == 1:
+           print("You got that fat C. Thats ok.")
+           valscore = valscore - 1
+         if pass1 == 0:
+           print("You failed. Rip...")
+           valscore = valscore - 2
+      else:
+         print("You failed. Rip...")
+         valscore = valscore - 2
+    else:
+        lib = str(input("In the library do you study, or go to sleep? Type 'Sleep' to go to sleep or 'Study' to study:"))
+        if lib == 'Study' or lib == 'study':
+          pass1 = 2
+          print("Now: APEL time. Hope you studied for the surpise test!!!")
+          if testtime == 0:
+           if pass1 == 2:
+             print("Nice! You received a juicy A!")
+           if pass1 == 1:
+             print("You got that fat C. Thats ok.")               
+             valscore = valscore - 1
+           if pass1 == 0:
+             print("You failed. Rip...")
+             valscore = valscore - 2
+          else:
+           print("You failed. Rip...")
+           valscore = valscore - 2
+        else:
+          print("You fall asleep and are sent home. You take the test the next day and receive a fat C.")
+          valscore = valscore - 1
+        
+  else:
+    valscore=valscore - 1
+    print("You now have a half hour to study. What do you do?")
+    study = str(input("Do you play Mariokart or cram for APEL? Type 'Cram' to cram or 'Mario' to play Mariokart:"))
+    if (study == 'cram' or study == "Cram"):
+      if pass1 < 2:
+        pass1 = pass1+1
+    else:
+      pass1 = 1
+    walk = str(input("UH OH!!! The teacher is walking over. Do you cover up your work and pretend to be asleep or take another L? Type 'L' to take the L or 'Sleep' to sleep:"))
+    if walk == 'L' or walk == "l":
+      valscore = valscore - 1
+      concert = str(input("Lunch time! Another option-do you go to the library or Ryan Kim's air guitar concert? Type 'Library' to go to the library or 'Concert' to go to the concert:"))
+      if concert == 'Concert' or concert == 'concert':
+        valscore = valscore - 1
+        print("Well you didn't study but you had a blast!")
+        print("Now: APEL time. Hope you studied for the surpise test!!!")
+        if testtime == 0:
+          if pass1 == 2:
+            print("Nice! You received a juicy A!")
+          if pass1 == 1:
+            print("You got that fat C. Thats ok.")
+            valscore = valscore - 1
+          if pass1 == 0:
+            print("You failed. Rip...")
+            valscore = valscore - 2
+        else:
+          print("You failed. Rip...")
+          valscore = valscore - 2
+      else:
+        lib = str(input("In the library do you study, or go to sleep? Type 'Sleep' to go to sleep or 'Study' to study:"))
+        if lib == 'Study' or lib == 'study':
+          pass1 = 2
+          print("Now: APEL time. Hope you studied for the surpise test!!!")
+          if testtime == 0:
+           if pass1 == 2:
+             print("Nice! You received a juicy A!")
+           if pass1 == 1:
+             print("You got that fat C. Thats ok.")               
+             valscore = valscore - 1
+           if pass1 == 0:
+             print("You failed. Rip...")
+             valscore = valscore - 2
+          else:
+           print("You failed. Rip...")
+           valscore = valscore - 2
+        else:
+          print("You fall asleep and are sent home. You take the test the next day and receive a fat C")
+          valscore = valscore - 1
+    else:
+      pass1 == 1
+      print("You fall asleep and are sent home. You take the test the next day and receive a fat C.")
+      valscore = valscore - 1
+  if valscore == 0 or valscore == -1:
+    print("Well, hope you're happy with going to Palomar when you were so close to becoming valedictorian...all that work for a school that accepts you if you apply...")
+  if valscore == 1:
+    print("Look at the silver lining I guess: SDSU is still a state school and you'll get very good at keg stands.")
+  if valscore == 2:
+    print("UC Merced! Not terrible but barely a UC...")
+  if valscore == 3:
+    print("Nice! You were pretty average for an AP student, making it to UCSD. I hope your parents are happy with you living at home for another 4 years because dorms are expensive!")
+  if valscore == 4:
+    print("Not the best, but still pretty good. You were the Saledictorian. You made it into UC Berkley-a great school providing you don't get shot or burned! Have fun at college living in constant fear!")
+  if valscore == 5:
+    print("Nicely done. You were the Valedictorian. I hope that your mind is still working after studying so hard for all of those AP tests and not cheating at all ;-) You got into Stanford and will graduate with insane student debt.")
+  print("Thanks for playing!!! Play again soon please!")
