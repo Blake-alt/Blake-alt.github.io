@@ -1,0 +1,90 @@
+from __future__ import print_function
+import random
+from colorama import Fore, Back, Style
+from colorama import init
+init(autoreset=True)
+
+def Craps():
+    print (Fore.WHITE + "Welcome...")
+    guess = str(input(Fore.YELLOW + "Pass or Don't Pass the line?: "))
+    Dice1 = random.randint(1,6)
+    Dice2 = random.randint(1,6)
+    Dice3 = random.randint(1,6)
+    Dice4 = random.randint(1,6)
+    RollVal1 = Dice1+Dice2
+    RollVal2 = Dice3+Dice4
+    lose = (2,3,12)
+    natural = (7,11)
+    print ("Rolled:", RollVal1)
+    if guess == "Pass" or guess == "pass" or guess == "P" or guess == "p":
+        pass1 = 1
+        play = 1
+    else:
+        pass1 = 0
+        play = 1
+    if RollVal1 in lose:
+        if pass1 == 1:
+            print (Fore.RED + "Craps! You lose!", RollVal1)
+        else:
+            print (Fore.GREEN + "Congrats!", RollVal1)
+    else:
+        if RollVal1 in natural:
+            if pass1 == 1:
+                print (Fore.BLUE + "Lucky Shot!! You win!", RollVal1)
+            else:
+                print (Fore.RED + "Should've passed the line...", RollVal1)
+        else:
+          while (True):
+                print(Fore.CYAN + "Roll!")
+                print(RollVal2)
+                if RollVal2 == 7 or RollVal2 == RollVal1:
+                    if RollVal2 == 7 and RollVal1 != RollVal2:
+                        if pass1==1:
+                            print(Fore.RED + "You Lose! You rolled", RollVal2, Fore.RED +  "and your first roll was", RollVal1,".")
+                            playagain = str(input(Fore.YELLOW + "Play again? Yes or No?: "))
+                            if playagain == "Yes" or playagain == "yes":
+                              Craps()
+                            else:
+                              print(Fore.WHITE + "Nope! Too bad!")
+                              Craps()
+                            break
+                        else:
+                            print(Fore.GREEN + "You're one lucky gambler! You rolled a", RollVal2)
+                            playagain = str(input(Fore.YELLOW + "Play again? Yes or No?: "))
+                            if playagain == "Yes" or playagain == "yes":
+                              Craps()
+                            else:
+                              print(Fore.WHITE + "Nope! Too bad!")
+                              Craps()
+                            break
+                    else:
+                        if pass1==1:
+                            print(Fore.GREEN + "You Win! You rolled", RollVal2, Fore.GREEN + "and your first roll was", RollVal1,".")
+                            playagain = str(input(Fore.YELLOW + "Play again? Yes or No?: "))
+                            if playagain == "Yes" or playagain == "yes":
+                              Craps()
+                            else:
+                              print(Fore.WHITE + "Nope! Too bad!")
+                              Craps()
+                            break
+                        else:
+                            print(Fore.RED + "The odds were not in your favor today friend. You rolled a", RollVal2)
+                            playagain = str(input(Fore.YELLOW + "Play again? Yes or No?: "))
+                            if playagain == "Yes" or playagain == "yes":
+                              Craps()
+                            else:
+                              print(Fore.WHITE + "Nope! Too bad!")
+                              Craps()
+                            break
+                else:     
+                    Dice3 = random.randint(1,6)
+                    Dice4 = random.randint(1,6)
+                    RollVal2 = Dice3 + Dice4
+                    continue
+        if play == 1 :
+          playagain = str(input(Fore.YELLOW + "Play again? Yes or No?: "))
+          if playagain == "Yes" or playagain == "yes":
+           Craps()
+          else:
+            print(Fore.WHITE + "Nope! Too bad!")
+            Craps()
